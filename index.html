@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Google Fonts  font-['Cormorant_SC'] -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&display=swap" rel="stylesheet"> -->
+
+    <!-- TailwindConfig -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                /* screens: {
+                    sm: '1440px',
+                    md: '2000px',
+                    lg: '2200px',
+                    xl: '2300px',
+                }, */
+                extend: {
+                    colors: {
+                        myRed: '#da373d',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn {
+                @apply bg-slate-400 text-white rounded-lg text-center p-2 hover:bg-green-300 hover:text-black transition-all
+            }
+        }
+        @layer base {
+            h1 {
+                @apply text-white text-9xl
+            }
+        }
+    </style>
+
+
+
+    <!-- FlowBite Tailwind -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>  -->
+
+    
+    <title>Spotify</title>
+</head>
+
+<body class="bg-green-600 h-screen relative pb-48 min-h-screen">
+    <header class="bg-black flex justify-between items-center h-16 lg:h-20">
+        <!-- 
+            Probar DarkMode:  Ej: bg-white dark:bg-black
+         -->
+        <img src="./assets/spotify.png" alt="not found" class="h-6 mx-4 sm:h-8 lg:h-12 lg:ml-8">
+        <div class="hidden text-white text-lg lg:text-2xl sm:flex">
+            <a href="*" class="mx-2 lg:mx-4">Premium</a>
+            <p>|</p>
+            <a href="*" class="mx-2 lg:mx-4">Ayuda</a>
+            <p>|</p>
+            <a href="*" class="mx-2 lg:mx-4">Descargar</a>
+            <!-- 
+                <a href="*" class="btn">Premium</a> 
+                Prueba componentes en tailwind
+            -->
+        </div>
+        <img src="./assets/burguer.png" alt="not found" class="flex h-4 mx-4 sm:hidden">
+    </header>
+    <main
+        class="my-8 h-60 text-white text-lg flex flex-wrap justify-evenly items-center sm:text-2xl lg:text-3xl md:h-4/6">
+        <div
+            class="bg-black w-2/5 mx-2 my-2 p-1 h-full flex flex-col items-center justify-around rounded-2xl shadow-2xl shadow-black transition-all hover:bg-gray-900 hover:scale-105 hover:cursor-pointer md:w-1/5">
+            <p>Musica</p>
+            <div
+                class="bg-[url('./assets/coldplay.jpg')] border-green-600 border bg-cover bg-center h-3/4 w-4/5 rounded-xl">
+            </div>
+        </div>
+        <div
+            class="bg-black w-2/5 mx-2 my-2 p-1 h-full flex flex-col items-center justify-around rounded-2xl shadow-2xl shadow-black transition-all hover:bg-gray-900 hover:scale-105 hover:cursor-pointer md:w-1/5">
+            <p>Podcast</p>
+            <div
+                class="bg-[url('./assets/podcast.jpg')] border-green-600 border bg-cover bg-center h-3/4 w-4/5 rounded-xl">
+            </div>
+        </div>
+        <div
+            class="bg-black w-2/5 mx-2 my-2 p-1 h-full flex flex-col items-center justify-around rounded-2xl shadow-2xl shadow-black transition-all hover:bg-gray-900 hover:scale-105 hover:cursor-pointer md:w-1/5">
+            <p>AudioLibros</p>
+            <div
+                class="bg-[url('./assets/audioBooks.jpeg')] border-green-600 border bg-cover bg-center h-3/4 w-4/5 rounded-xl">
+            </div>
+        </div>
+        <div
+            class="bg-black w-2/5 mx-2 my-2 p-1 h-full flex flex-col items-center justify-around rounded-2xl shadow-2xl shadow-black transition-all hover:bg-gray-900 hover:scale-105 hover:cursor-pointer md:w-1/5">
+            <p>Playlist</p>
+            <div
+                class="bg-[url('./assets/playlist.jpg')] border-green-600 border bg-cover bg-center h-3/4 w-4/5 rounded-xl">
+            </div>
+        </div>
+    </main>
+    <footer
+        class="flex justify-around text-white text-xs text-center items-center bg-black h-32 absolute bottom-0 w-screen sm:h-40 lg:text-sm">
+        <div class="flex flex-col justify-evenly h-full">
+            <a href="*">Acerca de</a>
+            <a href="*">Empleo</a>
+            <a href="*">For the record</a>
+        </div>
+        <div class="flex flex-col justify-evenly h-full hidden sm:flex">
+            <a href="*">Compañia</a>
+            <a href="*">Desarrolladores</a>
+            <a href="*">Publicidad</a>
+        </div>
+        <div class="flex flex-col justify-evenly h-full">
+            <a href="*">App móvil</a>
+            <a href="*">Reproductor web</a>
+            <a href="*">Ayuda</a>
+        </div>
+
+
+        <!-- Toogle DarkMode -->
+        <!-- <label for="default-toggle" class="inline-flex relative items-center cursor-pointer">
+            <input type="checkbox" value="" id="default-toggle" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" id="dark"></div>
+            <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dark Mode</span>
+          </label>  -->
+
+
+
+        <div class="flex items-start justify-end h-4/6 w-1/4">
+            <img src="./assets/spotify.png" alt="not found" class="h-6 mx-1 sm:h-8 lg:h-12 lg:ml-8">
+
+        </div>
+    </footer>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Script DarkMode -->
+    <!-- <script src="./dark.js"></script> -->
+    
+</body>
+
+</html>
+
+
+<!-- 
+    * TailwindUI
+    * Tailwind Components
+    * Tailwind Elements
+    * Flowbite
+    * DaysiUI
+    * TailBlocks
+    * Material Tailwind
+    * Tailwind Templates
+-->
+
+
+<!-- 
+
+    Vieron:
+        *Google Fonts
+        *Media Queries o Responsive
+        *Javascript
+        *
+
+ -->
